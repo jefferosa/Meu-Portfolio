@@ -33,13 +33,29 @@ function App() {
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Grid container spacing={3}>
           
-          {/* Bloco 1: Sobre Mim */}
+          {/* Bloco 1: Foto/Avatar */}
+          <Grid size={{ xs: 12, md: 4 }}>
+            <BentoCard sx={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+              <Avatar src="/perfil.jpg" alt="Jefferosa" sx={{ width: 150, height: 150, mb: 2, border: '4px solid #2A2A2A' }} />
+              <Typography variant="h6">Jefferson Rosa</Typography>
+              <Typography variant="body2" color="primary">Software Developer</Typography>
+            </BentoCard>
+          </Grid>
+
+          {/* Bloco 2: Sobre Mim */}
           <Grid size={{ xs: 12, md: 8 }}>
             <BentoCard>
               <Typography variant="h2">Olá, eu sou o Jefferson Rosa.</Typography>
+
               <Typography variant="body1" color="text.secondary" sx={{ mt: 2, fontSize: '1.1rem', lineHeight: 1.6 }}>
-                Desenvolvedor com 3 anos de experiência sólida em C# e .NET, focado na criação de interfaces web modernas e explorando o desenvolvimento de ambientes 3D.
+                Desenvolvedor Fullstack formado em Análise e Desenvolvimento de Sistemas e pós-graduando em Inteligência Artificial. Tenho 3 anos de experiência construindo soluções sólidas com C# e .NET, atuando desde a evolução e manutenção de sistemas legados (Windows Forms) e bancos MySQL, até a arquitetura de APIs modernas.
               </Typography>
+
+              <Typography variant="body1" color="text.secondary" sx={{ mt: 2, fontSize: '1.1rem', lineHeight: 1.6 }}>
+                Hoje, meu foco é integrar esse ecossistema robusto de backend com interfaces web de alta performance em React. Tenho vivência completa na rotina de engenharia de software, trabalhando guiado por metodologias ágeis, sprints, code reviews e versionamento limpo com Git.
+              </Typography>
+
+              {/* Botões de Redes Sociais */}
               <Stack direction="row" spacing={2} sx={{ mt: 'auto', pt: 4 }}>
                 <IconButton color="primary" component="a" href="https://github.com/jefferosa" target="_blank">
                   <GitHubIcon fontSize="large" />
@@ -51,15 +67,6 @@ function App() {
                   <EmailIcon fontSize="large" />
                 </IconButton>
               </Stack>
-            </BentoCard>
-          </Grid>
-
-          {/* Bloco 2: Foto/Avatar */}
-          <Grid size={{ xs: 12, md: 4 }}>
-            <BentoCard sx={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-              <Avatar src="/perfil.jpg" alt="Jefferosa" sx={{ width: 150, height: 150, mb: 2, border: '4px solid #2A2A2A' }} />
-              <Typography variant="h6">Jefferson Rosa</Typography>
-              <Typography variant="body2" color="primary">Software Developer</Typography>
             </BentoCard>
           </Grid>
 
